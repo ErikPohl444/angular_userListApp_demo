@@ -16,8 +16,8 @@ userListApp.controller("userListCont", function($scope, $http) {
 
 userListApp.directive("ngcCustomUser", function() {
 	return {
-  	scope : {u : "=user" },
-  	template: "<strong>{{u.name}}</strong><br />" +
+  	scope : {u : "=user", label: "@lbl" },
+  	template: "<strong>{{label}}{{u.name}}</strong><br />" +
     "{{u.email}}<br />" +
     "{{u.phone}}<br />" +
     "<a href=\"{{u.website}}\">{{u.website}}<\a>"
