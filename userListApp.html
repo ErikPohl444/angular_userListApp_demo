@@ -1,14 +1,6 @@
 <div ng-app="userListApp" ng-controller="userListCont">
-    <div class="highlight">
-      <strong>{{current.name}}</strong><br /> 
-      {{current.email}}<br />
-      {{current.phone}}<br />
-      <a href="{{current.website}}">{{current.website}}</a>
+    <div class="highlight" ngc-custom-user user="current">
     </div>
-    <div ng-repeat="u in users"?>
-      <strong>{{u.name}}</strong><br /> 
-      {{u.email}}<br />
-      {{u.phone}}<br />
-      <a href="{{u.website}}">{{u.website}}</a>
+    <div ng-repeat="u in users" ngc-custom-user user="u">
     </div>
-</div>
+  </div>

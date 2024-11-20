@@ -13,3 +13,13 @@ userListApp.controller("userListCont", function($scope, $http) {
     website: "exactivate.com"
   };
 });
+
+userListApp.directive("ngcCustomUser", function() {
+	return {
+  	scope : {u : "=user" },
+  	template: "<strong>{{u.name}}</strong><br />" +
+    "{{u.email}}<br />" +
+    "{{u.phone}}<br />" +
+    "<a href=\"{{u.website}}\">{{u.website}}<\a>"
+  };
+});
