@@ -1,5 +1,8 @@
 <div ng-app="userListApp" ng-controller="userListCont">
     <div ng-repeat="u in users"?>
-      {{u.name}} {{u.email}}
+      <strong>{{u.name}}</strong><br /> 
+      {{u.email}}<br />
+      {{u.phone}}<br />
+      <a href="{{u.website}}">{{u.website}}</a>
     </div>
 </div>
